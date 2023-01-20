@@ -1,0 +1,969 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC316B40-FBC3-4D44-9FAC-11B19CE84524}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OBE_Desktop</RootNamespace>
+    <AssemblyName>OBE_Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>F:\Saqlain Mushtaq\FYP\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8A871FED94811C0845102C402E7EDE06736D5233</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OBE_UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.Core">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\MyProject\LibraryManagementSystem\PresentationLayer\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\6th Semester\VP LAB\Lab Tasks Homework\13th Task\Lab13\Lab13\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Section\StudentUserUI\StudentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\StudentUserUI\StudentUser.Designer.cs">
+      <DependentUpon>StudentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\StudentUserUI\UpdateStudentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\StudentUserUI\UpdateStudentUser.Designer.cs">
+      <DependentUpon>UpdateStudentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\StudentUserUI\ViewStudentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\StudentUserUI\ViewStudentUser.Designer.cs">
+      <DependentUpon>ViewStudentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\Activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\Activity.Designer.cs">
+      <DependentUpon>Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\UpdateActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\UpdateActivity.Designer.cs">
+      <DependentUpon>UpdateActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\ViewActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentMethod\Activity\ViewActivity.Designer.cs">
+      <DependentUpon>ViewActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\UpdateCampus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\UpdateCampus.Designer.cs">
+      <DependentUpon>UpdateCampus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\ViewCampus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\ViewCampus.Designer.cs">
+      <DependentUpon>ViewCampus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\AddClassActivityWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\AddClassActivityWeight.Designer.cs">
+      <DependentUpon>AddClassActivityWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\GPAWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\GPAWeight.Designer.cs">
+      <DependentUpon>GPAWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\UpdateClassActivityWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\UpdateClassActivityWeight.Designer.cs">
+      <DependentUpon>UpdateClassActivityWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\ViewClassActivityWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Activity Weights\ViewClassActivityWeight.Designer.cs">
+      <DependentUpon>ViewClassActivityWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ActivityResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ActivityResult.Designer.cs">
+      <DependentUpon>ActivityResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\CreateActivityResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\CreateActivityResult.Designer.cs">
+      <DependentUpon>CreateActivityResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\UpdateActivityResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\UpdateActivityResult.Designer.cs">
+      <DependentUpon>UpdateActivityResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ViewActivityResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ViewActivityResult.Designer.cs">
+      <DependentUpon>ViewActivityResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\CreateClassActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\CreateClassActivity.Designer.cs">
+      <DependentUpon>CreateClassActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ClassActivityHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ClassActivityHome.Designer.cs">
+      <DependentUpon>ClassActivityHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\GPA\MarksGPA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\GPA\MarksGPA.Designer.cs">
+      <DependentUpon>MarksGPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\UpdateClassActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\UpdateClassActivity.Designer.cs">
+      <DependentUpon>UpdateClassActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ViewClassActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ViewClassActivity.Designer.cs">
+      <DependentUpon>ViewClassActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\CLOs\CLOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\CLOs\CLOList.Designer.cs">
+      <DependentUpon>CLOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\PLOs\PLOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\PLOs\PLOList.Designer.cs">
+      <DependentUpon>PLOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SemsterGPA\SemesterGPAHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SemsterGPA\SemesterGPAHome.Designer.cs">
+      <DependentUpon>SemesterGPAHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SemsterGPA\StudentSemesterGPA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SemsterGPA\StudentSemesterGPA.Designer.cs">
+      <DependentUpon>StudentSemesterGPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\ClassStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\ClassStudents.Designer.cs">
+      <DependentUpon>ClassStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\EnrollClassStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\EnrollClassStudent.Designer.cs">
+      <DependentUpon>EnrollClassStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\ImportFromProgramBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\ImportFromProgramBatch.Designer.cs">
+      <DependentUpon>ImportFromProgramBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\SelectStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\Students\SelectStudents.Designer.cs">
+      <DependentUpon>SelectStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\Courses.Designer.cs">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\CourseSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\CourseSection.Designer.cs">
+      <DependentUpon>CourseSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\UpdateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\UpdateCourse.Designer.cs">
+      <DependentUpon>UpdateCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\UpdateCourseSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\UpdateCourseSection.Designer.cs">
+      <DependentUpon>UpdateCourseSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\ViewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseUI\ViewCourse.Designer.cs">
+      <DependentUpon>ViewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\UpdateDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\UpdateDepartment.Designer.cs">
+      <DependentUpon>UpdateDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\ViewDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\ViewDepartment.Designer.cs">
+      <DependentUpon>ViewDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\Programs Batches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\Programs Batches.Designer.cs">
+      <DependentUpon>Programs Batches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\UpdateProgramBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\UpdateProgramBatch.Designer.cs">
+      <DependentUpon>UpdateProgramBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\ViewProgramBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramBatchUI\ViewProgramBatch.Designer.cs">
+      <DependentUpon>ViewProgramBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\Programs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\Programs.Designer.cs">
+      <DependentUpon>Programs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\UpdateProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\UpdateProgram.Designer.cs">
+      <DependentUpon>UpdateProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\ViewProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\ProgramUI\ViewProgram.Designer.cs">
+      <DependentUpon>ViewProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\CLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\CLO.Designer.cs">
+      <DependentUpon>CLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\UpdateCLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\UpdateCLO.Designer.cs">
+      <DependentUpon>UpdateCLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\ViewCLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\CLO_UI\ViewCLO.Designer.cs">
+      <DependentUpon>ViewCLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\PEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\PEO.Designer.cs">
+      <DependentUpon>PEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\UpdatePEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\UpdatePEO.Designer.cs">
+      <DependentUpon>UpdatePEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\ViewPEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PEO_UI\ViewPEO.Designer.cs">
+      <DependentUpon>ViewPEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\PLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\PLO.Designer.cs">
+      <DependentUpon>PLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\UpdatePLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\UpdatePLO.Designer.cs">
+      <DependentUpon>UpdatePLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\ViewPLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OBE_Section\PLO_UI\ViewPLO.Designer.cs">
+      <DependentUpon>ViewPLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\UpdateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\UpdateRole.Designer.cs">
+      <DependentUpon>UpdateRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\ViewRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\ViewRole.Designer.cs">
+      <DependentUpon>ViewRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\UpdateSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\UpdateSchool.Designer.cs">
+      <DependentUpon>UpdateSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\ViewSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\ViewSchool.Designer.cs">
+      <DependentUpon>ViewSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\Semesters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\Semesters.Designer.cs">
+      <DependentUpon>Semesters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\DepartmentUI\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\School.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SchoolUI\School.Designer.cs">
+      <DependentUpon>School.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\Campus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CampusUI\Campus.Designer.cs">
+      <DependentUpon>Campus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyInstitute_Section\InstituteUI\Institute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\InstituteUI\Institute.Designer.cs">
+      <DependentUpon>Institute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\UpdateSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\UpdateSemester.Designer.cs">
+      <DependentUpon>UpdateSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\ViewSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\SemesterUI\ViewSemester.Designer.cs">
+      <DependentUpon>ViewSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\RolesUI\Role.Designer.cs">
+      <DependentUpon>Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\InstituteUI\Update Institute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\InstituteUI\Update Institute.Designer.cs">
+      <DependentUpon>Update Institute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\InstituteUI\ViewInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\InstituteUI\ViewInstitute.Designer.cs">
+      <DependentUpon>ViewInstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\ViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Section\UserUI\ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\ViewCourseSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInstitute_Section\CourseSectionUI\ViewCourseSection.Designer.cs">
+      <DependentUpon>ViewCourseSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SemesterTranscriptReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SemesterTranscriptReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Admin_Section\StudentUserUI\StudentUser.resx">
+      <DependentUpon>StudentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\StudentUserUI\UpdateStudentUser.resx">
+      <DependentUpon>UpdateStudentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\StudentUserUI\ViewStudentUser.resx">
+      <DependentUpon>ViewStudentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessmentMethod\Activity\Activity.resx">
+      <DependentUpon>Activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessmentMethod\Activity\UpdateActivity.resx">
+      <DependentUpon>UpdateActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssessmentMethod\Activity\ViewActivity.resx">
+      <DependentUpon>ViewActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CampusUI\UpdateCampus.resx">
+      <DependentUpon>UpdateCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CampusUI\ViewCampus.resx">
+      <DependentUpon>ViewCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Activity Weights\AddClassActivityWeight.resx">
+      <DependentUpon>AddClassActivityWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Activity Weights\GPAWeight.resx">
+      <DependentUpon>GPAWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Activity Weights\UpdateClassActivityWeight.resx">
+      <DependentUpon>UpdateClassActivityWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Activity Weights\ViewClassActivityWeight.resx">
+      <DependentUpon>ViewClassActivityWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ActivityResult.resx">
+      <DependentUpon>ActivityResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\CreateActivityResult.resx">
+      <DependentUpon>CreateActivityResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\UpdateActivityResult.resx">
+      <DependentUpon>UpdateActivityResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ActivityResult\ViewActivityResult.resx">
+      <DependentUpon>ViewActivityResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\CreateClassActivity.resx">
+      <DependentUpon>CreateClassActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ClassActivityHome.resx">
+      <DependentUpon>ClassActivityHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\GPA\MarksGPA.resx">
+      <DependentUpon>MarksGPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\UpdateClassActivity.resx">
+      <DependentUpon>UpdateClassActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Assessment\Class Activity\ViewClassActivity.resx">
+      <DependentUpon>ViewClassActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\CLOs\CLOList.resx">
+      <DependentUpon>CLOList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\PLOs\PLOList.resx">
+      <DependentUpon>PLOList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SemsterGPA\SemesterGPAHome.resx">
+      <DependentUpon>SemesterGPAHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SemsterGPA\StudentSemesterGPA.resx">
+      <DependentUpon>StudentSemesterGPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Students\ClassStudents.resx">
+      <DependentUpon>ClassStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Students\EnrollClassStudent.resx">
+      <DependentUpon>EnrollClassStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Students\ImportFromProgramBatch.resx">
+      <DependentUpon>ImportFromProgramBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\Students\SelectStudents.resx">
+      <DependentUpon>SelectStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseUI\Courses.resx">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\CourseSection.resx">
+      <DependentUpon>CourseSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseUI\UpdateCourse.resx">
+      <DependentUpon>UpdateCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\UpdateCourseSection.resx">
+      <DependentUpon>UpdateCourseSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseUI\ViewCourse.resx">
+      <DependentUpon>ViewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\DepartmentUI\UpdateDepartment.resx">
+      <DependentUpon>UpdateDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\DepartmentUI\ViewDepartment.resx">
+      <DependentUpon>ViewDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramBatchUI\Programs Batches.resx">
+      <DependentUpon>Programs Batches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramBatchUI\UpdateProgramBatch.resx">
+      <DependentUpon>UpdateProgramBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramBatchUI\ViewProgramBatch.resx">
+      <DependentUpon>ViewProgramBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramUI\Programs.resx">
+      <DependentUpon>Programs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramUI\UpdateProgram.resx">
+      <DependentUpon>UpdateProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\ProgramUI\ViewProgram.resx">
+      <DependentUpon>ViewProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\RolesUI\UpdateRole.resx">
+      <DependentUpon>UpdateRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\RolesUI\ViewRole.resx">
+      <DependentUpon>ViewRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SchoolUI\UpdateSchool.resx">
+      <DependentUpon>UpdateSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SchoolUI\ViewSchool.resx">
+      <DependentUpon>ViewSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SemesterUI\Semesters.resx">
+      <DependentUpon>Semesters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\DepartmentUI\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SchoolUI\School.resx">
+      <DependentUpon>School.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CampusUI\Campus.resx">
+      <DependentUpon>Campus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\CLO_UI\CLO.resx">
+      <DependentUpon>CLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\CLO_UI\UpdateCLO.resx">
+      <DependentUpon>UpdateCLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\CLO_UI\ViewCLO.resx">
+      <DependentUpon>ViewCLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PEO_UI\PEO.resx">
+      <DependentUpon>PEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PEO_UI\UpdatePEO.resx">
+      <DependentUpon>UpdatePEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PEO_UI\ViewPEO.resx">
+      <DependentUpon>ViewPEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PLO_UI\PLO.resx">
+      <DependentUpon>PLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PLO_UI\UpdatePLO.resx">
+      <DependentUpon>UpdatePLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OBE_Section\PLO_UI\ViewPLO.resx">
+      <DependentUpon>ViewPLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\InstituteUI\Institute.resx">
+      <DependentUpon>Institute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SemesterUI\UpdateSemester.resx">
+      <DependentUpon>UpdateSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\SemesterUI\ViewSemester.resx">
+      <DependentUpon>ViewSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\UserUI\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\UserUI\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\RolesUI\Role.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\InstituteUI\Update Institute.resx">
+      <DependentUpon>Update Institute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\InstituteUI\ViewInstitute.resx">
+      <DependentUpon>ViewInstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Section\UserUI\ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyInstitute_Section\CourseSectionUI\ViewCourseSection.resx">
+      <DependentUpon>ViewCourseSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SemesterTranscriptReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SemesterTranscriptReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\university-icon-18-ffffff-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-2-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brain-3-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-file-4-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart-161.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation-cap-16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_of_Software_engineering_-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_of_Software_engineering_-logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_of_Software_engineering_-logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBE_BEL\OBE_BEL.csproj">
+      <Project>{0fb909bc-1737-450b-93b9-b09e5536a413}</Project>
+      <Name>OBE_BEL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OBE_BLL\OBE_BLL.csproj">
+      <Project>{a86e6fe7-80e9-4e40-b8ad-96d697e5da10}</Project>
+      <Name>OBE_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OBE_DAL\OBE_DAL.csproj">
+      <Project>{3FD900FF-BB30-4948-896F-8AF4C302C48A}</Project>
+      <Name>OBE_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning1.png" />
+    <None Include="Resources\Success1.png" />
+    <None Include="Resources\Info1.png" />
+    <None Include="Resources\Error1.png" />
+    <None Include="Resources\Cancel1.png" />
+    <None Include="Resources\createResult.png" />
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\createResult1.png" />
+    <Content Include="Resources\Error.png" />
+    <None Include="Resources\icons8_learning_40px.png" />
+    <None Include="Resources\icons8_learning_40px1.png" />
+    <Content Include="Resources\Info.png" />
+    <None Include="Resources\RefreshIcon.png" />
+    <None Include="Resources\undo.png" />
+    <Content Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
