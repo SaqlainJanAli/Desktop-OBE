@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FB909BC-1737-450B-93B9-B09E5536A413}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OBE_BEL</RootNamespace>
+    <AssemblyName>OBE_BEL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Section\StudentUserBEL\AdmissionCategory.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\AdmissionType.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\BScType.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\HSSCType.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\Quota.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\Religion.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\Status.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\StudentUser.cs" />
+    <Compile Include="Admin_Section\StudentUserBEL\StudyMode.cs" />
+    <Compile Include="Assessment_Section\ActivityBEL\Activity.cs" />
+    <Compile Include="Assessment_Section\ActivityBEL\AllowedOperation.cs" />
+    <Compile Include="Assessment_Section\AssessmentMethod.cs" />
+    <Compile Include="MyInstitute_Section\CampusesBEL\Campus.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\BaseType.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\CourseLevel.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\Course.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\ActivityWeight\ActivityWeight.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\Assessment\ClassActivity.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\Assessment\ClassActivityResult.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\Assessment\StudentCourseSectionResult.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\Assessment\SubActivity.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\Class Students\EnrollStudent.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\CourseSection.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\DeliveryFormat.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\KnowledgeArea.cs" />
+    <Compile Include="MyInstitute_Section\CourseBEL\KnowledgeProfile.cs" />
+    <Compile Include="MyInstitute_Section\CourseSectionBEL\ProgramCourse.cs" />
+    <Compile Include="MyInstitute_Section\DepartmentBEL\Department.cs" />
+    <Compile Include="Admin_Section\RolesBEL\Gender.cs" />
+    <Compile Include="MyInstitute_Section\GpaBEL\StudentSemesterResult.cs" />
+    <Compile Include="MyInstitute_Section\GPA_Method.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\City.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\Country.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\Institute.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\IssuingAuthority.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\PLOCalculationMethod.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\Region.cs" />
+    <Compile Include="MyInstitute_Section\LearningType.cs" />
+    <Compile Include="MyInstitute_Section\ProgramBatchBEL\ProgramBatch.cs" />
+    <Compile Include="MyInstitute_Section\ProgramBEL\NoOfSession.cs" />
+    <Compile Include="MyInstitute_Section\ProgramBEL\Program.cs" />
+    <Compile Include="MyInstitute_Section\ProgramBEL\ProgramLevel.cs" />
+    <Compile Include="OBE_Section\CLO_BEL\CLO.cs" />
+    <Compile Include="OBE_Section\CLO_BEL\CLOCourse.cs" />
+    <Compile Include="OBE_Section\CLO_BEL\CLOType.cs" />
+    <Compile Include="OBE_Section\PEO_BEL\PEO.cs" />
+    <Compile Include="OBE_Section\PEO_BEL\PEOProgram.cs" />
+    <Compile Include="OBE_Section\PLO_BEL\PLO.cs" />
+    <Compile Include="OBE_Section\PLO_BEL\PLOProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultModel.cs" />
+    <Compile Include="Admin_Section\RolesBEL\RoleBEL\Role.cs" />
+    <Compile Include="MyInstitute_Section\InstituteBEL\Type.cs" />
+    <Compile Include="Admin_Section\RolesBEL\RoleBEL\RoleType.cs" />
+    <Compile Include="Admin_Section\RolesBEL\RolePrivacyBEL\RolePrivacy.cs" />
+    <Compile Include="MyInstitute_Section\SchoolsBEL\School.cs" />
+    <Compile Include="MyInstitute_Section\SemesterBEL\Semester.cs" />
+    <Compile Include="MyInstitute_Section\SemesterBEL\SemesterType.cs" />
+    <Compile Include="Admin_Section\UserBEL\FacultyType.cs" />
+    <Compile Include="Admin_Section\UserBEL\FacultyUser.cs" />
+    <Compile Include="Admin_Section\UserBEL\FType.cs" />
+    <Compile Include="Admin_Section\UserBEL\User.cs" />
+    <Compile Include="ViewModels\EnrolledStudentsNoResultVM.cs" />
+    <Compile Include="ViewModels\VM_CampusInstituteCity.cs" />
+    <Compile Include="ViewModels\VM_DepartmentSchool.cs" />
+    <Compile Include="ViewModels\VM_InstituteCountryCity.cs" />
+    <Compile Include="ViewModels\VM_SchoolCampusCity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MyInstitute_Section\CourseSectionBEL\CLOs\" />
+    <Folder Include="MyInstitute_Section\CourseSectionBEL\PLOs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
