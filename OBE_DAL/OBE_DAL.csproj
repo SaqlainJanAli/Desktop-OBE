@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD900FF-BB30-4948-896F-8AF4C302C48A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OBE_DAL</RootNamespace>
+    <AssemblyName>OBE_DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_DAL\StudentUser_DAL.cs" />
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Assessment_DAL\Activity_DAL.cs" />
+    <Compile Include="Migrations\202107071757514_PEOs_Created.cs" />
+    <Compile Include="Migrations\202107071757514_PEOs_Created.designer.cs">
+      <DependentUpon>202107071757514_PEOs_Created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107071759431_PEOPrograms_Created.cs" />
+    <Compile Include="Migrations\202107071759431_PEOPrograms_Created.designer.cs">
+      <DependentUpon>202107071759431_PEOPrograms_Created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107130822357_ChangesInProgramTbl.cs" />
+    <Compile Include="Migrations\202107130822357_ChangesInProgramTbl.designer.cs">
+      <DependentUpon>202107130822357_ChangesInProgramTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107160658156_PLOsAndProfCreated.cs" />
+    <Compile Include="Migrations\202107160658156_PLOsAndProfCreated.designer.cs">
+      <DependentUpon>202107160658156_PLOsAndProfCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107190541192_CLOsAndTypesCreated.cs" />
+    <Compile Include="Migrations\202107190541192_CLOsAndTypesCreated.designer.cs">
+      <DependentUpon>202107190541192_CLOsAndTypesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107190543031_TypesEntered.cs" />
+    <Compile Include="Migrations\202107190543031_TypesEntered.designer.cs">
+      <DependentUpon>202107190543031_TypesEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107190547106_CLOCourseCreated.cs" />
+    <Compile Include="Migrations\202107190547106_CLOCourseCreated.designer.cs">
+      <DependentUpon>202107190547106_CLOCourseCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109070426176_AllowedOpCreated.cs" />
+    <Compile Include="Migrations\202109070426176_AllowedOpCreated.designer.cs">
+      <DependentUpon>202109070426176_AllowedOpCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109070427062_AllowedOPEntered.cs" />
+    <Compile Include="Migrations\202109070427062_AllowedOPEntered.designer.cs">
+      <DependentUpon>202109070427062_AllowedOPEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109070431293_ActivityCreated.cs" />
+    <Compile Include="Migrations\202109070431293_ActivityCreated.designer.cs">
+      <DependentUpon>202109070431293_ActivityCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109090932118_ActivityCreated1.cs" />
+    <Compile Include="Migrations\202109090932118_ActivityCreated1.designer.cs">
+      <DependentUpon>202109090932118_ActivityCreated1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109170630086_ClassAndSubActCreated.cs" />
+    <Compile Include="Migrations\202109170630086_ClassAndSubActCreated.designer.cs">
+      <DependentUpon>202109170630086_ClassAndSubActCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110091826451_ReligionCreated.cs" />
+    <Compile Include="Migrations\202110091826451_ReligionCreated.designer.cs">
+      <DependentUpon>202110091826451_ReligionCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110101210349_ReligionsAdded.cs" />
+    <Compile Include="Migrations\202110101210349_ReligionsAdded.designer.cs">
+      <DependentUpon>202110101210349_ReligionsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120504048_RegionsCreated.cs" />
+    <Compile Include="Migrations\202110120504048_RegionsCreated.designer.cs">
+      <DependentUpon>202110120504048_RegionsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120509197_ChangesInInstitute.cs" />
+    <Compile Include="Migrations\202110120509197_ChangesInInstitute.designer.cs">
+      <DependentUpon>202110120509197_ChangesInInstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120524263_CitiesCreated.cs" />
+    <Compile Include="Migrations\202110120524263_CitiesCreated.designer.cs">
+      <DependentUpon>202110120524263_CitiesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120529248_ChangesforCities.cs" />
+    <Compile Include="Migrations\202110120529248_ChangesforCities.designer.cs">
+      <DependentUpon>202110120529248_ChangesforCities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120531409_RegionsEntered.cs" />
+    <Compile Include="Migrations\202110120531409_RegionsEntered.designer.cs">
+      <DependentUpon>202110120531409_RegionsEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110120619432_CitiesEntered.cs" />
+    <Compile Include="Migrations\202110120619432_CitiesEntered.designer.cs">
+      <DependentUpon>202110120619432_CitiesEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110160923124_TblsForStdUsersCreatd.cs" />
+    <Compile Include="Migrations\202110160923124_TblsForStdUsersCreatd.designer.cs">
+      <DependentUpon>202110160923124_TblsForStdUsersCreatd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110160932243_StudentUsrsCrtd.cs" />
+    <Compile Include="Migrations\202110160932243_StudentUsrsCrtd.designer.cs">
+      <DependentUpon>202110160932243_StudentUsrsCrtd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110170749464_emptyMigration.cs" />
+    <Compile Include="Migrations\202110170749464_emptyMigration.designer.cs">
+      <DependentUpon>202110170749464_emptyMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110170814439_emptyMigration1.cs" />
+    <Compile Include="Migrations\202110170814439_emptyMigration1.designer.cs">
+      <DependentUpon>202110170814439_emptyMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110240817040_emptyMigration2.cs" />
+    <Compile Include="Migrations\202110240817040_emptyMigration2.designer.cs">
+      <DependentUpon>202110240817040_emptyMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110280715367_EnrollStudentsCreated.cs" />
+    <Compile Include="Migrations\202110280715367_EnrollStudentsCreated.designer.cs">
+      <DependentUpon>202110280715367_EnrollStudentsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110301219079_changesInEnrollTbl.cs" />
+    <Compile Include="Migrations\202110301219079_changesInEnrollTbl.designer.cs">
+      <DependentUpon>202110301219079_changesInEnrollTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110301832432_ActivityWeightsCreated.cs" />
+    <Compile Include="Migrations\202110301832432_ActivityWeightsCreated.designer.cs">
+      <DependentUpon>202110301832432_ActivityWeightsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111010654315_SectionForeignKeyAddedInActivity.cs" />
+    <Compile Include="Migrations\202111010654315_SectionForeignKeyAddedInActivity.designer.cs">
+      <DependentUpon>202111010654315_SectionForeignKeyAddedInActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111040723235_ActivityResultsCreated.cs" />
+    <Compile Include="Migrations\202111040723235_ActivityResultsCreated.designer.cs">
+      <DependentUpon>202111040723235_ActivityResultsCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111050526509_createdOnetoOneWithActivityandResult.cs" />
+    <Compile Include="Migrations\202111050526509_createdOnetoOneWithActivityandResult.designer.cs">
+      <DependentUpon>202111050526509_createdOnetoOneWithActivityandResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111070527424_ChangesInActResultTbl.cs" />
+    <Compile Include="Migrations\202111070527424_ChangesInActResultTbl.designer.cs">
+      <DependentUpon>202111070527424_ChangesInActResultTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111071806300_ChangesInEnrolStdTbl.cs" />
+    <Compile Include="Migrations\202111071806300_ChangesInEnrolStdTbl.designer.cs">
+      <DependentUpon>202111071806300_ChangesInEnrolStdTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111071815201_ChangesInEnrolStdTbl1.cs" />
+    <Compile Include="Migrations\202111071815201_ChangesInEnrolStdTbl1.designer.cs">
+      <DependentUpon>202111071815201_ChangesInEnrolStdTbl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111080641147_changsinActResultTbl.cs" />
+    <Compile Include="Migrations\202111080641147_changsinActResultTbl.designer.cs">
+      <DependentUpon>202111080641147_changsinActResultTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111120701318_ChangesinActiviytbl.cs" />
+    <Compile Include="Migrations\202111120701318_ChangesinActiviytbl.designer.cs">
+      <DependentUpon>202111120701318_ChangesinActiviytbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111120711349_CourseSecStdResultCreated.cs" />
+    <Compile Include="Migrations\202111120711349_CourseSecStdResultCreated.designer.cs">
+      <DependentUpon>202111120711349_CourseSecStdResultCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111150644432_changesinStdRstTbl.cs" />
+    <Compile Include="Migrations\202111150644432_changesinStdRstTbl.designer.cs">
+      <DependentUpon>202111150644432_changesinStdRstTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111271658532_changesinEnrollStdTbl.cs" />
+    <Compile Include="Migrations\202111271658532_changesinEnrollStdTbl.designer.cs">
+      <DependentUpon>202111271658532_changesinEnrollStdTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111271807310_changesInActWghtTbl.cs" />
+    <Compile Include="Migrations\202111271807310_changesInActWghtTbl.designer.cs">
+      <DependentUpon>202111271807310_changesInActWghtTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111281723448_changesinCloCourseTbl.cs" />
+    <Compile Include="Migrations\202111281723448_changesinCloCourseTbl.designer.cs">
+      <DependentUpon>202111281723448_changesinCloCourseTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112050618392_changesInActType.cs" />
+    <Compile Include="Migrations\202112050618392_changesInActType.designer.cs">
+      <DependentUpon>202112050618392_changesInActType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112140739314_stdSemesterRsltCrtd.cs" />
+    <Compile Include="Migrations\202112140739314_stdSemesterRsltCrtd.designer.cs">
+      <DependentUpon>202112140739314_stdSemesterRsltCrtd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInstitute_DAL\CampusDAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Activity Weight\ActivityWeightDAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Assessment\ClassActivityResult_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Assessment\ClassActivity_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Assessment\MarksGPA_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Class Students\ClassStudent_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection\Class Students\EnrollStudent_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\CourseSection_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\Course_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\Department_DAL.cs" />
+    <Compile Include="Home_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\InstituteDAL.cs" />
+    <Compile Include="Login_DAL.cs" />
+    <Compile Include="Migrations\202102211832008_RoleTablesCreated.cs" />
+    <Compile Include="Migrations\202102211832008_RoleTablesCreated.designer.cs">
+      <DependentUpon>202102211832008_RoleTablesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102211939129_InstituteTableCreated.cs" />
+    <Compile Include="Migrations\202102211939129_InstituteTableCreated.designer.cs">
+      <DependentUpon>202102211939129_InstituteTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102211942203_PopulateTablesWithDummyData.cs" />
+    <Compile Include="Migrations\202102211942203_PopulateTablesWithDummyData.designer.cs">
+      <DependentUpon>202102211942203_PopulateTablesWithDummyData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102211956042_ADummyInstituteIsAdded.cs" />
+    <Compile Include="Migrations\202102211956042_ADummyInstituteIsAdded.designer.cs">
+      <DependentUpon>202102211956042_ADummyInstituteIsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103030840523_InstituteTableCreated1.cs" />
+    <Compile Include="Migrations\202103030840523_InstituteTableCreated1.designer.cs">
+      <DependentUpon>202103030840523_InstituteTableCreated1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103220647244_InstituteTableCreated21.cs" />
+    <Compile Include="Migrations\202103220647244_InstituteTableCreated21.designer.cs">
+      <DependentUpon>202103220647244_InstituteTableCreated21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103220649415_addingcountriesdata.cs" />
+    <Compile Include="Migrations\202103220649415_addingcountriesdata.designer.cs">
+      <DependentUpon>202103220649415_addingcountriesdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103251741389_InstituteTableCreated2.cs" />
+    <Compile Include="Migrations\202103251741389_InstituteTableCreated2.designer.cs">
+      <DependentUpon>202103251741389_InstituteTableCreated2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103281809552_CampusTableCreated.cs" />
+    <Compile Include="Migrations\202103281809552_CampusTableCreated.designer.cs">
+      <DependentUpon>202103281809552_CampusTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103291211393_CreateSchoolsTable.cs" />
+    <Compile Include="Migrations\202103291211393_CreateSchoolsTable.designer.cs">
+      <DependentUpon>202103291211393_CreateSchoolsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103311400300_CreateGPAMethodsTable.cs" />
+    <Compile Include="Migrations\202103311400300_CreateGPAMethodsTable.designer.cs">
+      <DependentUpon>202103311400300_CreateGPAMethodsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103311403512_DummyDataForGPAMethodsTable.cs" />
+    <Compile Include="Migrations\202103311403512_DummyDataForGPAMethodsTable.designer.cs">
+      <DependentUpon>202103311403512_DummyDataForGPAMethodsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103311407461_CreatedAssessmentMethodsTable.cs" />
+    <Compile Include="Migrations\202103311407461_CreatedAssessmentMethodsTable.designer.cs">
+      <DependentUpon>202103311407461_CreatedAssessmentMethodsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103311409385_AddingDummyDataAssmntMthd.cs" />
+    <Compile Include="Migrations\202103311409385_AddingDummyDataAssmntMthd.designer.cs">
+      <DependentUpon>202103311409385_AddingDummyDataAssmntMthd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103311414153_CreatedDepartmentsTable.cs" />
+    <Compile Include="Migrations\202103311414153_CreatedDepartmentsTable.designer.cs">
+      <DependentUpon>202103311414153_CreatedDepartmentsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104100917048_CreateSemestersTable.cs" />
+    <Compile Include="Migrations\202104100917048_CreateSemestersTable.designer.cs">
+      <DependentUpon>202104100917048_CreateSemestersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104141227348_SemesterTypeTablesCreated.cs" />
+    <Compile Include="Migrations\202104141227348_SemesterTypeTablesCreated.designer.cs">
+      <DependentUpon>202104141227348_SemesterTypeTablesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104141229579_ProgramLevelsTableCreated.cs" />
+    <Compile Include="Migrations\202104141229579_ProgramLevelsTableCreated.designer.cs">
+      <DependentUpon>202104141229579_ProgramLevelsTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104141231381_LearningTypesTableCreated.cs" />
+    <Compile Include="Migrations\202104141231381_LearningTypesTableCreated.designer.cs">
+      <DependentUpon>202104141231381_LearningTypesTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104141234520_ProgramsTableCreated.cs" />
+    <Compile Include="Migrations\202104141234520_ProgramsTableCreated.designer.cs">
+      <DependentUpon>202104141234520_ProgramsTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150837593_NoOfSessionsTableCreatedAndForeignKeyAddedInPrograms.cs" />
+    <Compile Include="Migrations\202104150837593_NoOfSessionsTableCreatedAndForeignKeyAddedInPrograms.designer.cs">
+      <DependentUpon>202104150837593_NoOfSessionsTableCreatedAndForeignKeyAddedInPrograms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150844010_SemesterTypesEntered.cs" />
+    <Compile Include="Migrations\202104150844010_SemesterTypesEntered.designer.cs">
+      <DependentUpon>202104150844010_SemesterTypesEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150847475_ProgramLevelsEntered.cs" />
+    <Compile Include="Migrations\202104150847475_ProgramLevelsEntered.designer.cs">
+      <DependentUpon>202104150847475_ProgramLevelsEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150904548_NoOfSessionsEntered.cs" />
+    <Compile Include="Migrations\202104150904548_NoOfSessionsEntered.designer.cs">
+      <DependentUpon>202104150904548_NoOfSessionsEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104150907157_LearningTypesEntered.cs" />
+    <Compile Include="Migrations\202104150907157_LearningTypesEntered.designer.cs">
+      <DependentUpon>202104150907157_LearningTypesEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104151105572_ProgramsTableCreated1.cs" />
+    <Compile Include="Migrations\202104151105572_ProgramsTableCreated1.designer.cs">
+      <DependentUpon>202104151105572_ProgramsTableCreated1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104170645281_ProgramBatchesTableCreated.cs" />
+    <Compile Include="Migrations\202104170645281_ProgramBatchesTableCreated.designer.cs">
+      <DependentUpon>202104170645281_ProgramBatchesTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231103341_KnowledgeAreasTableCreated.cs" />
+    <Compile Include="Migrations\202104231103341_KnowledgeAreasTableCreated.designer.cs">
+      <DependentUpon>202104231103341_KnowledgeAreasTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231105069_KnowledgeAreasEntered.cs" />
+    <Compile Include="Migrations\202104231105069_KnowledgeAreasEntered.designer.cs">
+      <DependentUpon>202104231105069_KnowledgeAreasEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231108006_DeliveryFormatsTableCreated.cs" />
+    <Compile Include="Migrations\202104231108006_DeliveryFormatsTableCreated.designer.cs">
+      <DependentUpon>202104231108006_DeliveryFormatsTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231111267_DeliveryFormatsEntered.cs" />
+    <Compile Include="Migrations\202104231111267_DeliveryFormatsEntered.designer.cs">
+      <DependentUpon>202104231111267_DeliveryFormatsEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231114165_CourseLevelsTableCreated.cs" />
+    <Compile Include="Migrations\202104231114165_CourseLevelsTableCreated.designer.cs">
+      <DependentUpon>202104231114165_CourseLevelsTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231123434_KnowledgeProfilesCreateAndEntered.cs" />
+    <Compile Include="Migrations\202104231123434_KnowledgeProfilesCreateAndEntered.designer.cs">
+      <DependentUpon>202104231123434_KnowledgeProfilesCreateAndEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231131349_CourseLevelsEntered.cs" />
+    <Compile Include="Migrations\202104231131349_CourseLevelsEntered.designer.cs">
+      <DependentUpon>202104231131349_CourseLevelsEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104251243245_GendersTableCreated.cs" />
+    <Compile Include="Migrations\202104251243245_GendersTableCreated.designer.cs">
+      <DependentUpon>202104251243245_GendersTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104251245012_GendersEntered.cs" />
+    <Compile Include="Migrations\202104251245012_GendersEntered.designer.cs">
+      <DependentUpon>202104251245012_GendersEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104290707507_RoleTypesCreated.cs" />
+    <Compile Include="Migrations\202104290707507_RoleTypesCreated.designer.cs">
+      <DependentUpon>202104290707507_RoleTypesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104290710049_RoleTypesInserted.cs" />
+    <Compile Include="Migrations\202104290710049_RoleTypesInserted.designer.cs">
+      <DependentUpon>202104290710049_RoleTypesInserted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104290719404_ChangesInRoleTables.cs" />
+    <Compile Include="Migrations\202104290719404_ChangesInRoleTables.designer.cs">
+      <DependentUpon>202104290719404_ChangesInRoleTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040629225_BaseTypeTableCreated.cs" />
+    <Compile Include="Migrations\202106040629225_BaseTypeTableCreated.designer.cs">
+      <DependentUpon>202106040629225_BaseTypeTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040631152_BaseTypeTableEntered.cs" />
+    <Compile Include="Migrations\202106040631152_BaseTypeTableEntered.designer.cs">
+      <DependentUpon>202106040631152_BaseTypeTableEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040657260_CoursesTableCreated2.cs" />
+    <Compile Include="Migrations\202106040657260_CoursesTableCreated2.designer.cs">
+      <DependentUpon>202106040657260_CoursesTableCreated2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040705466_CoursesTableCreated21.cs" />
+    <Compile Include="Migrations\202106040705466_CoursesTableCreated21.designer.cs">
+      <DependentUpon>202106040705466_CoursesTableCreated21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040912563_ChangesInCourseAndProgamCourseCreated.cs" />
+    <Compile Include="Migrations\202106040912563_ChangesInCourseAndProgamCourseCreated.designer.cs">
+      <DependentUpon>202106040912563_ChangesInCourseAndProgamCourseCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040925534_ChangesInCourseAndProgamCourse.cs" />
+    <Compile Include="Migrations\202106040925534_ChangesInCourseAndProgamCourse.designer.cs">
+      <DependentUpon>202106040925534_ChangesInCourseAndProgamCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040959552_ChangesInCourseAndProgamCourse1.cs" />
+    <Compile Include="Migrations\202106040959552_ChangesInCourseAndProgamCourse1.designer.cs">
+      <DependentUpon>202106040959552_ChangesInCourseAndProgamCourse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106071309479_FacultTypesCreatedAndEntered.cs" />
+    <Compile Include="Migrations\202106071309479_FacultTypesCreatedAndEntered.designer.cs">
+      <DependentUpon>202106071309479_FacultTypesCreatedAndEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106071413242_UsersTableCreated.cs" />
+    <Compile Include="Migrations\202106071413242_UsersTableCreated.designer.cs">
+      <DependentUpon>202106071413242_UsersTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106071416022_FacultyTableCreated.cs" />
+    <Compile Include="Migrations\202106071416022_FacultyTableCreated.designer.cs">
+      <DependentUpon>202106071416022_FacultyTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106080743386_CourseSectionsTableCreated.cs" />
+    <Compile Include="Migrations\202106080743386_CourseSectionsTableCreated.designer.cs">
+      <DependentUpon>202106080743386_CourseSectionsTableCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106140542013_ChangesInCourseSection.cs" />
+    <Compile Include="Migrations\202106140542013_ChangesInCourseSection.designer.cs">
+      <DependentUpon>202106140542013_ChangesInCourseSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106191620009_PrivaciesCreated.cs" />
+    <Compile Include="Migrations\202106191620009_PrivaciesCreated.designer.cs">
+      <DependentUpon>202106191620009_PrivaciesCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyInstitute_DAL\ProgramBatch_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\Program_DAL.cs" />
+    <Compile Include="OBESection_DAL\CLO_DAL.cs" />
+    <Compile Include="OBESection_DAL\PEO_DAL.cs" />
+    <Compile Include="OBESection_DAL\PLO_DAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin_DAL\Role_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\School_DAL.cs" />
+    <Compile Include="MyInstitute_DAL\Semester_DAL.cs" />
+    <Compile Include="Admin_DAL\User_DAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBE_BEL\OBE_BEL.csproj">
+      <Project>{0fb909bc-1737-450b-93b9-b09e5536a413}</Project>
+      <Name>OBE_BEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202102211832008_RoleTablesCreated.resx">
+      <DependentUpon>202102211832008_RoleTablesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102211939129_InstituteTableCreated.resx">
+      <DependentUpon>202102211939129_InstituteTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102211942203_PopulateTablesWithDummyData.resx">
+      <DependentUpon>202102211942203_PopulateTablesWithDummyData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102211956042_ADummyInstituteIsAdded.resx">
+      <DependentUpon>202102211956042_ADummyInstituteIsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103030840523_InstituteTableCreated1.resx">
+      <DependentUpon>202103030840523_InstituteTableCreated1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103220647244_InstituteTableCreated21.resx">
+      <DependentUpon>202103220647244_InstituteTableCreated21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103220649415_addingcountriesdata.resx">
+      <DependentUpon>202103220649415_addingcountriesdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103251741389_InstituteTableCreated2.resx">
+      <DependentUpon>202103251741389_InstituteTableCreated2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103281809552_CampusTableCreated.resx">
+      <DependentUpon>202103281809552_CampusTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103291211393_CreateSchoolsTable.resx">
+      <DependentUpon>202103291211393_CreateSchoolsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103311400300_CreateGPAMethodsTable.resx">
+      <DependentUpon>202103311400300_CreateGPAMethodsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103311403512_DummyDataForGPAMethodsTable.resx">
+      <DependentUpon>202103311403512_DummyDataForGPAMethodsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103311407461_CreatedAssessmentMethodsTable.resx">
+      <DependentUpon>202103311407461_CreatedAssessmentMethodsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103311409385_AddingDummyDataAssmntMthd.resx">
+      <DependentUpon>202103311409385_AddingDummyDataAssmntMthd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103311414153_CreatedDepartmentsTable.resx">
+      <DependentUpon>202103311414153_CreatedDepartmentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104100917048_CreateSemestersTable.resx">
+      <DependentUpon>202104100917048_CreateSemestersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104141227348_SemesterTypeTablesCreated.resx">
+      <DependentUpon>202104141227348_SemesterTypeTablesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104141229579_ProgramLevelsTableCreated.resx">
+      <DependentUpon>202104141229579_ProgramLevelsTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104141231381_LearningTypesTableCreated.resx">
+      <DependentUpon>202104141231381_LearningTypesTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104141234520_ProgramsTableCreated.resx">
+      <DependentUpon>202104141234520_ProgramsTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150837593_NoOfSessionsTableCreatedAndForeignKeyAddedInPrograms.resx">
+      <DependentUpon>202104150837593_NoOfSessionsTableCreatedAndForeignKeyAddedInPrograms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150844010_SemesterTypesEntered.resx">
+      <DependentUpon>202104150844010_SemesterTypesEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150847475_ProgramLevelsEntered.resx">
+      <DependentUpon>202104150847475_ProgramLevelsEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150904548_NoOfSessionsEntered.resx">
+      <DependentUpon>202104150904548_NoOfSessionsEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104150907157_LearningTypesEntered.resx">
+      <DependentUpon>202104150907157_LearningTypesEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104151105572_ProgramsTableCreated1.resx">
+      <DependentUpon>202104151105572_ProgramsTableCreated1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104170645281_ProgramBatchesTableCreated.resx">
+      <DependentUpon>202104170645281_ProgramBatchesTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231103341_KnowledgeAreasTableCreated.resx">
+      <DependentUpon>202104231103341_KnowledgeAreasTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231105069_KnowledgeAreasEntered.resx">
+      <DependentUpon>202104231105069_KnowledgeAreasEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231108006_DeliveryFormatsTableCreated.resx">
+      <DependentUpon>202104231108006_DeliveryFormatsTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231111267_DeliveryFormatsEntered.resx">
+      <DependentUpon>202104231111267_DeliveryFormatsEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231114165_CourseLevelsTableCreated.resx">
+      <DependentUpon>202104231114165_CourseLevelsTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231123434_KnowledgeProfilesCreateAndEntered.resx">
+      <DependentUpon>202104231123434_KnowledgeProfilesCreateAndEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231131349_CourseLevelsEntered.resx">
+      <DependentUpon>202104231131349_CourseLevelsEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104251243245_GendersTableCreated.resx">
+      <DependentUpon>202104251243245_GendersTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104251245012_GendersEntered.resx">
+      <DependentUpon>202104251245012_GendersEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290707507_RoleTypesCreated.resx">
+      <DependentUpon>202104290707507_RoleTypesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290710049_RoleTypesInserted.resx">
+      <DependentUpon>202104290710049_RoleTypesInserted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290719404_ChangesInRoleTables.resx">
+      <DependentUpon>202104290719404_ChangesInRoleTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040629225_BaseTypeTableCreated.resx">
+      <DependentUpon>202106040629225_BaseTypeTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040631152_BaseTypeTableEntered.resx">
+      <DependentUpon>202106040631152_BaseTypeTableEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040657260_CoursesTableCreated2.resx">
+      <DependentUpon>202106040657260_CoursesTableCreated2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040705466_CoursesTableCreated21.resx">
+      <DependentUpon>202106040705466_CoursesTableCreated21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040912563_ChangesInCourseAndProgamCourseCreated.resx">
+      <DependentUpon>202106040912563_ChangesInCourseAndProgamCourseCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040925534_ChangesInCourseAndProgamCourse.resx">
+      <DependentUpon>202106040925534_ChangesInCourseAndProgamCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040959552_ChangesInCourseAndProgamCourse1.resx">
+      <DependentUpon>202106040959552_ChangesInCourseAndProgamCourse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106071309479_FacultTypesCreatedAndEntered.resx">
+      <DependentUpon>202106071309479_FacultTypesCreatedAndEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106071413242_UsersTableCreated.resx">
+      <DependentUpon>202106071413242_UsersTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106071416022_FacultyTableCreated.resx">
+      <DependentUpon>202106071416022_FacultyTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106080743386_CourseSectionsTableCreated.resx">
+      <DependentUpon>202106080743386_CourseSectionsTableCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106140542013_ChangesInCourseSection.resx">
+      <DependentUpon>202106140542013_ChangesInCourseSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106191620009_PrivaciesCreated.resx">
+      <DependentUpon>202106191620009_PrivaciesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107071757514_PEOs_Created.resx">
+      <DependentUpon>202107071757514_PEOs_Created.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107071759431_PEOPrograms_Created.resx">
+      <DependentUpon>202107071759431_PEOPrograms_Created.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107130822357_ChangesInProgramTbl.resx">
+      <DependentUpon>202107130822357_ChangesInProgramTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107160658156_PLOsAndProfCreated.resx">
+      <DependentUpon>202107160658156_PLOsAndProfCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190541192_CLOsAndTypesCreated.resx">
+      <DependentUpon>202107190541192_CLOsAndTypesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190543031_TypesEntered.resx">
+      <DependentUpon>202107190543031_TypesEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190547106_CLOCourseCreated.resx">
+      <DependentUpon>202107190547106_CLOCourseCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109070426176_AllowedOpCreated.resx">
+      <DependentUpon>202109070426176_AllowedOpCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109070427062_AllowedOPEntered.resx">
+      <DependentUpon>202109070427062_AllowedOPEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109070431293_ActivityCreated.resx">
+      <DependentUpon>202109070431293_ActivityCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109090932118_ActivityCreated1.resx">
+      <DependentUpon>202109090932118_ActivityCreated1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109170630086_ClassAndSubActCreated.resx">
+      <DependentUpon>202109170630086_ClassAndSubActCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110091826451_ReligionCreated.resx">
+      <DependentUpon>202110091826451_ReligionCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110101210349_ReligionsAdded.resx">
+      <DependentUpon>202110101210349_ReligionsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120504048_RegionsCreated.resx">
+      <DependentUpon>202110120504048_RegionsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120509197_ChangesInInstitute.resx">
+      <DependentUpon>202110120509197_ChangesInInstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120524263_CitiesCreated.resx">
+      <DependentUpon>202110120524263_CitiesCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120529248_ChangesforCities.resx">
+      <DependentUpon>202110120529248_ChangesforCities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120531409_RegionsEntered.resx">
+      <DependentUpon>202110120531409_RegionsEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110120619432_CitiesEntered.resx">
+      <DependentUpon>202110120619432_CitiesEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110160923124_TblsForStdUsersCreatd.resx">
+      <DependentUpon>202110160923124_TblsForStdUsersCreatd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110160932243_StudentUsrsCrtd.resx">
+      <DependentUpon>202110160932243_StudentUsrsCrtd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110170749464_emptyMigration.resx">
+      <DependentUpon>202110170749464_emptyMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110170814439_emptyMigration1.resx">
+      <DependentUpon>202110170814439_emptyMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110240817040_emptyMigration2.resx">
+      <DependentUpon>202110240817040_emptyMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110280715367_EnrollStudentsCreated.resx">
+      <DependentUpon>202110280715367_EnrollStudentsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110301219079_changesInEnrollTbl.resx">
+      <DependentUpon>202110301219079_changesInEnrollTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110301832432_ActivityWeightsCreated.resx">
+      <DependentUpon>202110301832432_ActivityWeightsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111010654315_SectionForeignKeyAddedInActivity.resx">
+      <DependentUpon>202111010654315_SectionForeignKeyAddedInActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040723235_ActivityResultsCreated.resx">
+      <DependentUpon>202111040723235_ActivityResultsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111050526509_createdOnetoOneWithActivityandResult.resx">
+      <DependentUpon>202111050526509_createdOnetoOneWithActivityandResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111070527424_ChangesInActResultTbl.resx">
+      <DependentUpon>202111070527424_ChangesInActResultTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111071806300_ChangesInEnrolStdTbl.resx">
+      <DependentUpon>202111071806300_ChangesInEnrolStdTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111071815201_ChangesInEnrolStdTbl1.resx">
+      <DependentUpon>202111071815201_ChangesInEnrolStdTbl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111080641147_changsinActResultTbl.resx">
+      <DependentUpon>202111080641147_changsinActResultTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111120701318_ChangesinActiviytbl.resx">
+      <DependentUpon>202111120701318_ChangesinActiviytbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111120711349_CourseSecStdResultCreated.resx">
+      <DependentUpon>202111120711349_CourseSecStdResultCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111150644432_changesinStdRstTbl.resx">
+      <DependentUpon>202111150644432_changesinStdRstTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111271658532_changesinEnrollStdTbl.resx">
+      <DependentUpon>202111271658532_changesinEnrollStdTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111271807310_changesInActWghtTbl.resx">
+      <DependentUpon>202111271807310_changesInActWghtTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111281723448_changesinCloCourseTbl.resx">
+      <DependentUpon>202111281723448_changesinCloCourseTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112050618392_changesInActType.resx">
+      <DependentUpon>202112050618392_changesInActType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112140739314_stdSemesterRsltCrtd.resx">
+      <DependentUpon>202112140739314_stdSemesterRsltCrtd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
